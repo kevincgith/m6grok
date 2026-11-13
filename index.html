@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mark Six — latest draws</title>
+    <meta
+      name="description"
+      content="View the latest five Hong Kong Mark Six draws from the Hong Kong Jockey Club. Results only — no betting."
+    />
+    <meta name="theme-color" content="#1c2430" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="stripe" aria-hidden="true"></div>
+    <div class="page">
+      <header class="site-header">
+        <div>
+          <p class="eyebrow" data-i18n="eyebrow">Hong Kong results</p>
+          <h1>
+            <span data-i18n="heading">Mark Six</span>
+            <small data-i18n="headingSub">六合彩</small>
+          </h1>
+          <p class="lede" data-i18n="lede">
+            A results viewer for the latest five official draws. Nothing is
+            loaded until you ask.
+          </p>
+        </div>
+        <button id="lang" class="lang" type="button" data-i18n="langButton">
+          繁體中文
+        </button>
+      </header>
+
+      <main>
+        <section class="panel">
+          <button id="fetch" class="fetch" type="button" data-i18n="fetch">
+            Fetch latest 5 draws
+          </button>
+          <p id="status" class="status" role="status"></p>
+        </section>
+
+        <noscript>
+          <p class="message">
+            JavaScript is required to fetch results. 需要 JavaScript
+            才能擷取開獎結果。
+          </p>
+        </noscript>
+
+        <section id="results" class="results" aria-live="off"></section>
+      </main>
+
+      <footer class="site-footer">
+        <p>
+          <span data-i18n="sourceLabel">Source</span>:
+          <a
+            id="official"
+            href="https://bet.hkjc.com/en/marksix/results"
+            rel="noopener noreferrer"
+            >Hong Kong Jockey Club</a
+          >
+        </p>
+        <p data-i18n="disclaimer">
+          This page only displays published results. It is not affiliated with
+          the Hong Kong Jockey Club and does not offer betting.
+        </p>
+      </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
